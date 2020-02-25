@@ -1,7 +1,9 @@
-<div class="container">
-  <div class="row m-3">
-    <% @bicycles.each do |bicycle|  %>
-    <%= render "card", bicycle: bicycle %>
+<div class="row m-3">
+  <% @bicycles.each do |bicycle|  %>
+  <div class="col-4">
+    <%= link_to bicycle_path(bicycle) do %>
+      <%= render "card", bicycle: bicycle %>
     <% end %>
   </div>
+  <% end %>
 </div>
