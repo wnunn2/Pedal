@@ -23,8 +23,11 @@ gem 'pundit'
 gem 'simple_form'
 
 
-#cloudinary
+#secret keys
 gem 'dotenv-rails', groups: [:development, :test]
+
+#cloudinary
+gem 'cloudinary', '~> 1.12.0'
 
 
 
