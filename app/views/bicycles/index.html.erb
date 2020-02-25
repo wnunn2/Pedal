@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="bicycle">
-    </div>
+  <div class="row m-3">
+    <% @bicycles.each do |bicycle|  %>
+    <%= render "card", bicycle: bicycle %>
+    <% end %>
+  </div>
 </div>
-<% @bicycles.each do |bicycle| %>
-<%= bicycle.description %>
-<% end %>
