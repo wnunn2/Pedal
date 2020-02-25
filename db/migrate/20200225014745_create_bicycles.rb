@@ -6,7 +6,7 @@ class CreateBicycles < ActiveRecord::Migration[5.2]
       t.string :brand
       t.string :condition
       t.string :description
-      t.integer :user_id
+      t.references :user, foreign_key: true
       t.string :address
 
       t.timestamps
