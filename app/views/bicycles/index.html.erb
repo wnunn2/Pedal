@@ -1,5 +1,7 @@
 <div class="container">
   <div class="bicycle">
-    <div class="card"><%= @bicycle.name %></div>
-  </div>
+    </div>
 </div>
+<% @bicycles.each do |bicycle| %>
+<%= bicycle.description %>
+<% end %>
