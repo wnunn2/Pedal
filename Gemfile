@@ -19,6 +19,18 @@ gem 'webpacker'
 gem 'devise'
 gem 'pundit'
 
+#simple_form
+gem 'simple_form'
+
+
+#secret keys
+gem 'dotenv-rails', groups: [:development, :test]
+
+#cloudinary
+gem 'cloudinary', '~> 1.12.0'
+
+
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
