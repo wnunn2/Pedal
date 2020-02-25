@@ -16,8 +16,8 @@ puts "destroyed users and bicycles"
   user = User.new(
     email: Faker::Internet.email,
     password: "123456",
-    first_name: Faker::Name.unique.name,
-    last_name: Faker::Name.unique.name
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
   )
   user.save!
 
