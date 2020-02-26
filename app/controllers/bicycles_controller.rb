@@ -4,6 +4,14 @@ class BicyclesController < ApplicationController
 
   def index
     @bicycles = Bicycle.all
+    @bicycles = Bicycle.geocoded #returns flats with coordinates
+
+    @markers = @bicycles.map do |bicycle|
+      {
+        lat: bicycle.latitude,
+        lng: bicycle.longitude
+      }
+    end
   end
 
   def show
