@@ -3,4 +3,10 @@ class Booking < ApplicationRecord
   belongs_to :bicycle
   validates :start_date, presence: true
   validates :end_date, presence: true
+
+  def total_price
+    (end_date - start_date).to_i * bicycle.day_price
+  end
+
 end
+
