@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="col">
+    <h2>Book Your Bicycle</h2>
+  </div>
+  <div>
+    <%= simple_form_for @booking do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit 'Confirm Booking', class: 'btn booking-hover' %>
+    <% end %>
+  </div>
+</div>
