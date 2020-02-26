@@ -2,7 +2,7 @@
   <h1>Booking Confirmation</h1>
   <div class="card">
     <h4><%= @booking.user.first_name %><%= @booking.user.last_name %></h4>
-    <h4><%= @@booking.bicycle.brand %><%= @booking.bicycle.type %></h4>
+    <h4><%= @booking.bicycle.category %><%= @booking.bicycle.category %></h4>
     <h4><%= @booking.start_date %> - <%= @booking.end_date %></h4>
     <h4><%= @booking.total_price %></h4>
     </div>
