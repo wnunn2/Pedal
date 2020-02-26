@@ -53,6 +53,6 @@ bicycle = Bicycle.new(
   description: "sick ass bike, rent this",
   user: user
 )
-bicycle.save!
+bicycle.save
 
 puts "created bicycles and users"
