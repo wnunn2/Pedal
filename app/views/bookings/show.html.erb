@@ -1,10 +1,16 @@
-<div class="container">
-  <h1>Booking Confirmation</h1>
+<h2 class="d-flex justify-content-center mt-3">Congratulations! You have booked this bicycle:</h2>
+<div class="container d-flex justify-content-around">
   <div class="card">
-    <h4><%= @booking.user.first_name %><%= @booking.user.last_name %></h4>
-    <h4><%= @booking.bicycle.category %><%= @booking.bicycle.category %></h4>
-    <h4><%= @booking.start_date %> - <%= @booking.end_date %></h4>
-    <h4><%= @booking.total_price %></h4>
-    </div>
+    <h4>Username = <%= @booking.user.first_name %> <%= @booking.user.last_name %></h4>
+    <h4>Category = <%= @booking.bicycle.brand %><%= @booking.bicycle.category %></h4>
+    <h4>Start = <%= @booking.start_date %> finish = <%= @booking.end_date %></h4>
+    <h4>Total = <%= @booking.total_price %></h4>
+  </div>
+  <div class="card-booking">
+    <% @booking.bicycle.photos.each do |photo| %>
+    <%= cl_image_tag photo.key %>
+    <% end <%>
+      <n> </n>
+    </%>
   </div>
 </div>
