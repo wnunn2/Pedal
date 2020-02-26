@@ -1,14 +1,16 @@
 
 <div class="container wrapper">
   <div class="row">
-    <div class="col-12">
-    <div class="card p-3" >
-      <ul class="card-description-list" style="list-style-type:none">
-        <li> <strong><%= @bicycle.category %></strong></li>
-        <li> <strong>¥<%= @bicycle.day_price %></strong></li>
-        <li> <%= @bicycle.description %></li>
-        <li> <%= @bicycle.address %></li>
-      </ul>
+    <div class="col-12 p-0">
+    <div class="card" >
+      <div class="card-header">
+        <div class ="d-flex justify-content-between font-weight-bold"> <span><%= @bicycle.category %></span>
+          <span><%= @bicycle.address %></span>
+             <span>¥<%= @bicycle.day_price %></span></li>
+        </div>
+      <div class="card-body">
+        <%= @bicycle.description %>
+      </div>
     </div>
   </div>
   </div>
