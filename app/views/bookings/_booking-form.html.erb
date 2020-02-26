@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="col p-3">
-    <h5>Book Your Bicycle</h5>
+  <div class="col">
+    <h2>Book Your Bicycle</h2>
   </div>
   <div>
     <%= simple_form_for [@bicycle, @booking] do |f| %>
       <%= f.input :start_date, as: :date, html5: true %>
       <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.submit 'Book', class: 'btn btn-outline-primary' %>
+      <%= f.submit 'Confirm Booking', class: 'btn booking-hover' %>
     <% end %>
   </div>
 </div>
