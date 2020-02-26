@@ -2,7 +2,9 @@
   <div class="row">
     <div class="col-12 ">
       <div class="card-trip mt-3 ">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <% @bicycle.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, crop: :fill%>
+        <% end %>
       <div class="card-trip-infos">
         <div>
           <%= @bicycle.category %>
@@ -29,6 +31,3 @@
   <%= render 'bookings/booking-form' %>
   </div>
 </div>
-
-
-
