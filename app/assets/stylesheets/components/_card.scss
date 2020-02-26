@@ -15,7 +15,10 @@
   font-weight: bold;
   margin: 0;
 }
-
+.card-trip a{
+  text-decoration: none;
+  color: black;
+}
 .card-trip p {
   font-size: 12px;
   opacity: .7;
@@ -45,4 +48,13 @@
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
+.card-booking img {
+  margin-top: 32px;
+  width: 600px;
+  height:400px;
+  display: flex;
+  background-size: cover;
+}
+.card {
+  margin-top: 32px;
+}
