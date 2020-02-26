@@ -21,7 +21,7 @@ class BicyclesController < ApplicationController
   # end
   # private
   # def bicycle_params
-  #   params.require(:bicycle).permit(:name, :photo, :day_price, :address, :description, :category)
+  #   params.require(:bicycle).permit(:name, :photos [], :day_price, :address, :description, :category)
   # end
   # def find_bicycle
   #   @bicycle = Bicycle.find(params[:id])

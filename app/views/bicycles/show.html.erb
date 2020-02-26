@@ -1,12 +1,25 @@
-<div class="container"><div class="col-4">
-  <div class="card-trip mt-3">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-trip-infos">
-      <div>
-        <%= @bicycle.category %>
-      </div>
-      <h2 class="card-trip-pricing">¥<%= @bicycle.day_price %></h2>
+<div class="container">
+  <div class="row">
+    <div class="col-12 ">
+      <div class="card-trip mt-3">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <%= @bicycle.category %>
+        </div>
+        <h2 class="card-trip-pricing">¥<%= @bicycle.day_price %></h2>
+        </div>
       </div>
     </div>
   </div>
-</div
+</div>
+
+<div class="card-description">
+  <h2>Description</h2>
+  <ul style="list-style-type:none">
+    <li> <%= @bicycle.category %></li>
+    <li><%= @bicycle.day_price %></li>
+    <li><%= @bicycle.description %></li>
+    <li> <%= @bicycle.address %></li>
+  </ul>
+</div>
