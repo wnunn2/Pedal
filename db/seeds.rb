@@ -11,6 +11,7 @@ bike_images = ['https://res.cloudinary.com/dqei8yqj0/image/upload/v1582616227/Pe
 
 
 puts "destroying users and bicycles"
+Booking.destroy_all
 Bicycle.destroy_all
 User.destroy_all
 puts "destroyed users and bicycles"
