@@ -1,33 +1,30 @@
-<div class="container">
+
+<div class="container wrapper">
   <div class="row">
-    <div class="col-12 ">
+    <div class="col-12">
+    <div class="card p-3" >
+      <h4 class="d-flex justify-content-center">Description</h4>
+      <ul class="" style="list-style-type:none">
+        <li> <%= @bicycle.category %></li>
+        <li> <%= @bicycle.day_price %></li>
+        <li> <%= @bicycle.description %></li>
+        <li> <%= @bicycle.address %></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-6">
       <div class="card-trip mt-3 ">
         <% @bicycle.photos.each do |photo| %>
           <%= cl_image_tag photo.key, crop: :fill%>
         <% end %>
-      <div class="card-trip-infos">
-        <div>
-          <%= @bicycle.category %>
+
         </div>
-        <h2 class="card-trip-pricing">¥<%= @bicycle.day_price %></h2>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-
-<div class="container d-flex justify-content-around">
-  <div class="card-description mt-3" >
-    <h2 class="d-flex justify-content-center">Description</h2>
-    <ul class="" style="list-style-type:none">
-      <li> <%= @bicycle.category %></li>
-      <li><%= @bicycle.day_price %></li>
-      <li><%= @bicycle.description %></li>
-      <li> <%= @bicycle.address %></li>
-    </ul>
-</div>
-
-<div class="card-description mt-3">
-  <%= render 'bookings/booking-form' %>
+  <div class="col-6">
+    <%= render 'bookings/booking-form' %>
+    </div>
   </div>
 </div>
