@@ -47,13 +47,5 @@ user = User.new(
 )
 user.save!
 
-bicycle = Bicycle.new(
-  category: Bicycle::CATEGORIES.sample,
-  day_price: 500,
-  address: "1234 Meguro-town",
-  description: "sick ass bike, rent this",
-  user: user
-)
-bicycle.save
 
 puts "created bicycles and users"
