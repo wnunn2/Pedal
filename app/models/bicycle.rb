@@ -8,4 +8,5 @@ class Bicycle < ApplicationRecord
   validates :day_price, presence: true
   validates :description, presence: true
   validates :address, presence: true
+  validates :photos, attached: true
 end
