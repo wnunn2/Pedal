@@ -3,7 +3,7 @@ class Bicycle < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many_attached :photos
-  CATEGORIES = ["sports", "mountain", "electric", "tandem", "french", "unicycle", "fixed-gear"]
+  CATEGORIES = ["Road Bike", "Mountain Bike", "Electric Bike", "Tandem Bike", "Fixed-Gear Bike", "Folding Bike"]
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :day_price, presence: true
   validates :description, presence: true
