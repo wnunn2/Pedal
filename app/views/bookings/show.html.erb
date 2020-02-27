@@ -35,7 +35,7 @@
             <th scope="row"></th>
             <td><%= @booking.start_date %></td>
             <td><%= @booking.end_date %></td>
-            <td><%= @booking.total_price %></td>
+            <td>¥<%= @booking.total_price %></td>
         </tbody>
       </table>
       <div>
@@ -43,7 +43,6 @@
       </div>
     </div>
   </div>
-
   <div class="card-booking">
   <% @booking.bicycle.photos.each do |photo| %>
   <%= cl_image_tag photo.key %>
