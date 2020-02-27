@@ -1,0 +1,77 @@
+<head>
+  <title>My Bookings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#userbookings">My Bookings</a></li>
+    <li><a data-toggle="tab" href="#userlistings">My Listings</a></li>
+    <li><a data-toggle="tab" href="#bookingrequests">Booking Requests</a></li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="userbookings" class="tab-pane fade in active">
+      <h3>My Bookings</h3>
+      <div>
+        <% @user_bookings.each do |booking| %>
+          <div class="card-user-booking">
+            <% booking.bicycle.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+            <% end %>
+            <div class="card-user-booking-infos">
+              <h3>Booking from:</h3>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="userlistings" class="tab-pane fade">
+      <h3>My Listings</h3>
+      <div>
+        <% @user_bookings.each do |booking| %>
+          <div class="card-user-booking">
+            <% booking.bicycle.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+            <% end %>
+            <div class="card-user-booking-infos">
+              <h3>Renting to:</h3>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="bookingrequests" class="tab-pane fade">
+      <h3>Booking Requests</h3>
+      <div>
+        <% @user_bookings.each do |booking| %>
+          <div class="card-user-booking">
+            <% booking.bicycle.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+            <% end %>
+            <div class="card-user-booking-infos">
+              <h3>Booking request from:</h3>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
