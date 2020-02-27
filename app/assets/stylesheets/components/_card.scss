@@ -2,29 +2,24 @@
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
 .card-trip > img {
   width: 100%;
   object-fit: cover;
 }
-
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-
 .card-trip a{
   text-decoration: none;
   color: black;
 }
-
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -32,14 +27,12 @@
   align-items: flex-end;
   position: relative;
 }
-
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
-
 .card-description{
   background-color: white;
   height: 392px;
@@ -48,13 +41,11 @@
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
 .card-description-list > li {
   margin-bottom: 1rem;
   margin-block-start: 0rem;
   margin-block-end: 0rem;
 }
-
 .card-booking img {
   width: 600px;
   height:400px;
@@ -62,14 +53,21 @@
   background-size: cover;
   box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
-
 th {
   text-align: inherit;
   vertical-align: text-top;
 }
-
 td, th, tr {
   padding: 0.5rem;
 }
 
-
+.total_{
+  height:38px;
+  padding-top: 9px;
+  padding-left: 9px;
+}
+.col-5 {
+  // margin-top: 8px;
+  background-color: white;
+  padding-top: 25px;
+}
