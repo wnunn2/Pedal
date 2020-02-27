@@ -1,21 +1,37 @@
 <h2 class="d-flex justify-content-center mt-3">Details of your booking:</h2>
-<div class="container d-flex justify-content-around">
-  <div class="card-booking-info">
-
-     <div class="card">
-      <p><%= @booking.start_date %> <%= @booking.end_date %></p>
-    </div>
-     <div class="card">
-      <p><%= @booking.total_price %></p>
-    </div>
-      <button id="confirm-booking" class="btn">Confirm!</button>
+  <div class="card-user">
+    <%= @booking.bicycle.user.email %>
   </div>
-
-  <div class="card-booking">
-    <% @booking.bicycle.photos.each do |photo| %>
-    <%= cl_image_tag photo.key %>
-    <% end %>
-      <n> </n>
-    </%>
+<div class="d-flex justify-content-around">
+  <div class="d-flex justify-content-end flex-column">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">START</th>
+          <th scope="col">FINISH</th>
+          <th scope="col">TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td><%= @booking.start_date %></td>
+          <td><%= @booking.end_date %></td>
+          <td><%= @booking.total_price %></td>
+      </tbody>
+    </table>
+    <div>
+      <button id="confirm-booking" class="btn-confirmation">Confirm!</button>
+    </div>
+  </div>
+    <div class="card-booking">
+      <% @booking.bicycle.photos.each do |photo| %>
+      <%= cl_image_tag photo.key %>
+      <% end %>
+        <n> </n>
+      </%>
+    </div>
   </div>
 </div>
+

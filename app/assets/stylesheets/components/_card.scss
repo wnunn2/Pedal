@@ -23,8 +23,6 @@
   opacity: .7;
   margin: 0;
 }
-
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -32,7 +30,6 @@
   align-items: flex-end;
   position: relative;
 }
-
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
@@ -47,7 +44,6 @@
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
 .card-description-list > li {
   margin-bottom: 1rem;
   margin-block-start: 0rem;
@@ -59,15 +55,10 @@
   height:400px;
   display: flex;
   background-size: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
-.card {
-  margin-top: 32px;
-  width:450px;
-  height:55px;
-  margin: 0, 0 ,
-  p{
-    margin:32px;
+.card-user{
 
-  }
 }
+
 
