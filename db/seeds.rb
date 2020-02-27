@@ -20,11 +20,11 @@ bike_images = ['https://res.cloudinary.com/dqei8yqj0/image/upload/v1582616227/Pe
 
 tokyo_wards = ["Adachi", "Arakawa", "Bunkyo", "Chiyoda", "Chuo", "Edogawa", "Itabashi", "Katsushika", "Kita", "Koto", "Meguro", "Minato", "Nakano", "Nerima", "Ota", "Setagaya", "Shibuya", "Shinagawa", "Shinjuku", "Suginami", "Sumida", "Toshima", "Taito"]
 
-puts "destroying users and bicycles"
+puts "Destroying Bookings, Bicycles, and Users... "
 Booking.destroy_all
 Bicycle.destroy_all
 User.destroy_all
-puts "destroyed users and bicycles"
+puts "Bookings, Bicycles, and Users have been destroyed."
 
 4.times do
   user = User.new(
@@ -56,8 +56,8 @@ user = User.new(
   email: "richlynch2@gmail.com",
   password: "123456",
   first_name: "rich",
-  last_name: "lynch"
+  last_name: "lynch",
 )
 user.save!
 
-puts "created bicycles and users"
+puts "Created new Bookings, Bicycles, and Users"
