@@ -7,6 +7,7 @@ class BicyclesController < ApplicationController
       @bicycles = Bicycle.where(address: params[:query])
     else
       @bicycles = Bicycle.all
+    end
   end
 
   def show

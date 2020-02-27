@@ -3,11 +3,11 @@
     <div class= "header">
     <h1>Book any bike you like</h1>
     </div>
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Search an area" />
-        <div class="btn btn-flat">
-         <%= link_to "Search", bicycles_path, class: "no-underline" %> <i class="fas fa-search"> </i>
+    <%= form_tag bicycles_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search an area" %>
         </div>
       </div>
     <% end %>
