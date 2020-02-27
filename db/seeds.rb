@@ -18,6 +18,7 @@ bike_images = ['https://res.cloudinary.com/dqei8yqj0/image/upload/v1582616227/Pe
   "Folding Bike": "A folding bike can be a great travel companion.  Because they fold, they fit easily on a subway, in the trunk of a car, or on a boat. When traveling by air one can avoid the additional charges and hassle associated with transporting a full-sized bicycle. Perfect for a little Japanese salary man!"
 }
 
+tokyo_wards = ["Adachi", "Arakawa", "Bunkyo", "Chiyoda", "Chuo", "Edogawa", "Itabashi", "Katsushika", "Kita", "Koto", "Meguro", "Minato", "Nakano", "Nerima", "Ota", "Setagaya", "Shibuya", "Shinagawa", "Shinjuku", "Suginami", "Sumida", "Toshima", "Taito"]
 
 puts "destroying users and bicycles"
 Booking.destroy_all
@@ -41,7 +42,7 @@ puts "destroyed users and bicycles"
     bicycle = Bicycle.new(
       category: bike_type,
       day_price: rand(800..1200),
-      address: Faker::Address.street_address,
+      address: tokyo_wards.sample,
       description: descriptions_hash[bike_type_symbol],
       user: user
     )

@@ -1,4 +1,10 @@
 class Bicycle < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: [ :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
   # has_one_attached :photo
   belongs_to :user
   has_many :bookings
