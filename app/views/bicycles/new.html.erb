@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Add Bicycle</h1>
+  <%= simple_form_for @bicycle do |f| %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :category %>
+    <%= f.input :day_price %>
+    <%= f.input :brand %>
+    <%= f.input :condition %>
+    <%= f.input :description %>
+    <%= f.input :user_id %>
+    <%= f.input :address %>
+    <%= f.submit 'Submit' %>
+  <% end %>
+</div>
