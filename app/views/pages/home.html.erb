@@ -1,15 +1,13 @@
-<div class="banner" style="background-image: url(<%= image_path('homepage_pic.jpg') %>">
-    <div class="search-form" >
+<div class="banner" style="background-image: url(<%= image_path('homepage_pic.jpg') %>);">
+  <div class="search-form" >
     <div class= "header">
-    <h1>Book any bike you like</h1>
+      <h1>Book Any Bike You Like</h1>
     </div>
     <%= form_tag bicycles_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query],
       class: "form-control",
       placeholder: "Search an area in Tokyo" %>
-        </div>
-      </div>
     <% end %>
   </div>
 </div>
