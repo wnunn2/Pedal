@@ -9,11 +9,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav mr-auto">
         <% if user_signed_in? %>
-          <div class="nav-item active">
-            <%= link_to "How it works", "#", class: "nav-link" %>
-          </div>
           <div class="nav-item">
-            <%= link_to "List your bicycle", "bicycles", class: "nav-link" %>
+            <%= link_to "List your bicycle", "bicycles/new", class: "nav-link" %>
           </div>
           <div class="nav-item dropdown">
 
