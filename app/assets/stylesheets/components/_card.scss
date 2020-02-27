@@ -14,16 +14,17 @@
   font-weight: bold;
   margin: 0;
 }
+
 .card-trip a{
   text-decoration: none;
   color: black;
 }
+
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 16px;
@@ -39,6 +40,7 @@
   top: -20px;
   width: 40px;
 }
+
 .card-description{
   background-color: white;
   height: 392px;
@@ -53,16 +55,17 @@
   margin-block-start: 0rem;
   margin-block-end: 0rem;
 }
+
 .card-booking img {
-  margin-top: 32px;
   width: 600px;
   height:400px;
   display: flex;
   background-size: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
-.card {
-  margin-top: 32px;
-  width:450px;
-  height:55px;
+
+.card-user{
 
 }
+
+

@@ -1,21 +1,55 @@
-<h2 class="d-flex justify-content-center mt-3">Details of your booking:</h2>
-<div class="container d-flex justify-content-around">
-  <div class="card-booking-info">
-
-     <div class="card">
-      <h4><%= @booking.start_date %> <%= @booking.end_date %></h4>
+<h2 class="d-flex justify-content-center py-4">Booking Detail:</h2>
+<div class="d-flex justify-content-around ">
+  <div class="card-book">
+    <div class="card-user">
+      <h2>About the owner</h2>
+  <table class="table">
+    <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td><%= @booking.bicycle.user.first_name %> <%= @booking.bicycle.user.last_name %></td>
+    </tr>
+    <tr>
+      <th scope="row">E-mail</th>
+      <td><%= @booking.bicycle.user.email %></td>
+    </tr>
+     <tr>
+      <th scope="row">Location</th>
+      <td><%= @booking.bicycle.address%></td>
+    </tr>
+    </tbody>
+</table>
     </div>
-     <div class="card p-2 w-100 bd-highlight">
-      <h4><%= @booking.total_price %></h4>
+    <div class="d-flex justify-content-end flex-column">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">START</th>
+            <th scope="col">FINISH</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td><%= @booking.start_date %></td>
+            <td><%= @booking.end_date %></td>
+            <td><%= @booking.total_price %></td>
+        </tbody>
+      </table>
+      <div>
+        <button id="confirm-booking" class="btn-confirmation">Confirm!</button>
+      </div>
     </div>
-      <button id="confirm-booking" class="btn">Confirm!</button>
   </div>
 
   <div class="card-booking">
-    <% @booking.bicycle.photos.each do |photo| %>
-    <%= cl_image_tag photo.key %>
-    <% end %>
-      <n> </n>
-    </%>
+  <% @booking.bicycle.photos.each do |photo| %>
+  <%= cl_image_tag photo.key %>
+  <% end %>
+  <n> </n>
+  </%>
   </div>
 </div>
+
