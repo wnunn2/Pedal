@@ -19,8 +19,10 @@ class BicyclesController < ApplicationController
   def new
     @bicycle = Bicycle.new
   end
+
   def create
-    @bicycle = Bicycle.new
+    @bicycle = Bicycle.new(bicycle_params)
+    @bicycle.user = current_user
     if @bicycle.save
       redirect_to bicycle_path(@bicycle)
     else
@@ -29,7 +31,7 @@ class BicyclesController < ApplicationController
   end
   private
   def bicycle_params
-    params.require(:bicycle).permit(:name, :photos [], :day_price, :address, :description, :category)
+    params.require(:bicycle).permit(:name, :day_price, :address, :description, :category, photos: [])
   end
   def find_bicycle
     @bicycle = Bicycle.find(params[:id])
