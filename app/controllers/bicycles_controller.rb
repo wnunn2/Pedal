@@ -8,6 +8,7 @@ class BicyclesController < ApplicationController
     else
       @bicycles = Bicycle.all
     end
+      @query = params[:query]
   end
 
   def show
