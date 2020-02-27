@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     @user_bookings = Booking.where(user_id: current_user.id)
-    @user_listings = Bicycle.where(user_id: current_user.id)
+    @user_listings = current_user.bicycles
     @booking_requests = current_user.booking_requests
   end
 
