@@ -1,6 +1,5 @@
 .card-trip {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -64,8 +63,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
 
-.card-user{
+th {
+  text-align: inherit;
+  vertical-align: text-top;
+}
 
+td, th, tr {
+  padding: 0.5rem;
 }
 
 .card-user-booking {
