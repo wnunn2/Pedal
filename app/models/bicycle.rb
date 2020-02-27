@@ -9,4 +9,10 @@ class Bicycle < ApplicationRecord
   validates :description, presence: true
   validates :address, presence: true
   validates :photos, attached: true
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: [ :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
