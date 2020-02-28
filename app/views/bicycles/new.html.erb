@@ -1,11 +1,11 @@
 <div class="container">
   <div class="form">
-    <h1>Add Bicycle</h1>
+    <h1>List Your Bicycle</h1>
     <%= simple_form_for @bicycle do |f| %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.input :category, collection: Bicycle::CATEGORIES, include_blank: false %>
       <%= f.input :day_price, as: :currency, placeholder: "800" %>
-      <%= f.input :description, placeholder: "This bike has been well maintained, and is perfect for a weekend getaway..." %>
+      <%= f.input :description, placeholder: "Please add a brief description of your bicycle here..." %>
       <%= f.input :address  %>
       <%= f.submit 'Submit' %>
     <% end %>

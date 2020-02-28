@@ -41,3 +41,4 @@ yarn-debug.log*
 .DS_Store
 .env*
 server.pid*
+server.pid~981f9740b47fd5e125da396f609441fbd07e7e3e*
