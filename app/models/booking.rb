@@ -8,5 +8,10 @@ class Booking < ApplicationRecord
     (end_date - start_date).to_i * bicycle.day_price
   end
 
+  def show
+   total_price
+  end
+
+
 end
 
