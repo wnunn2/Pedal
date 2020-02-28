@@ -30,6 +30,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 #cloudinary
 gem 'cloudinary', '~> 1.12.0'
 
+#geocoder
+gem 'geocoder'
 
 
 group :development do
