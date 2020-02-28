@@ -1,13 +1,22 @@
 <div class="container">
-  <div class="form">
-    <h1>List Your Bicycle</h1>
-    <%= simple_form_for @bicycle do |f| %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.input :category, collection: Bicycle::CATEGORIES, include_blank: false %>
-      <%= f.input :day_price, as: :currency, placeholder: "800" %>
-      <%= f.input :description, placeholder: "Please add a brief description of your bicycle here..." %>
-      <%= f.input :address  %>
-      <%= f.submit 'Submit' %>
-    <% end %>
+  <div class="row justify-content-center">
+    <div class="py-5 col-xs-12 col-sm-6 border rounded my-5">
+
+
+      <div class="form">
+      <h2 class="d-flex justify-content-center mb-3">List Your Bicycle</h2>
+        <%= simple_form_for @bicycle do |f| %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.input :category, collection: Bicycle::CATEGORIES, include_blank: false %>
+          <%= f.input :day_price, as: :currency, placeholder: "800" %>
+          <%= f.input :description, placeholder: "Please add a brief description of your bicycle here..." %>
+          <%= f.input :address  %>
+           <div class="d-flex justify-content-center"><%= f.submit 'Submit', class: 'btn-p' %></div>
+        <% end %>
+      </div>
+    </div>
+
+    </div>
   </div>
 </div>
+
