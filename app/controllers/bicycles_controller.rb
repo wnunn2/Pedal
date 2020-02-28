@@ -14,7 +14,9 @@ class BicyclesController < ApplicationController
       @markers = @bicycles.map do |bicycle|
         {
           lat: bicycle.latitude,
-          lng: bicycle.longitude
+          lng: bicycle.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { bicycle: bicycle }),
+          image_url: helpers.asset_url('bikelogo.png')
         }
     end
   end
