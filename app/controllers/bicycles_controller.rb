@@ -1,6 +1,7 @@
 class BicyclesController < ApplicationController
   # before_action :find_bicycle, only: %i(show)
   skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_policy_scoped, only: [:index]
 
   def index
     if params[:query].present?
