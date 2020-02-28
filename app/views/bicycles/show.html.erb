@@ -8,7 +8,13 @@
       </div>
     </div>
     <div class="col-5 border rounded" style="margin-top: 24px">
-      <%= render 'bookings/booking-form' %>
+      <% if @bicycle.user = current_user %>
+      <div class="booking-success" style="position: absolute; top: 50%; left: 15%; margin: 0;">
+        <%= "You have successfully listed your bicycle!" %>
+      </div>
+      <% else %>
+        <%= render 'bookings/booking-form' %>
+      <% end %>
     </div>
   </div>
         <div class="card-header-table mt-3 border" style="background-color: white; width: 1125px; ">
