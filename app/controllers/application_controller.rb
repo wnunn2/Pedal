@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :skip_authorization
   before_action :authenticate_user!
   include Pundit
 
@@ -30,4 +31,3 @@ class ApplicationController < ActionController::Base
   end
 end
 
-# Test comment

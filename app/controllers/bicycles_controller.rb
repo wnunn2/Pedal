@@ -1,6 +1,6 @@
 class BicyclesController < ApplicationController
   # before_action :find_bicycle, only: %i(show)
-  before_action :skip_authorization, only: [:show]
+  before_action :skip_authorization
   skip_before_action :authenticate_user!, only: [:index, :show]
   skip_after_action :verify_policy_scoped, only: [:index]
 
