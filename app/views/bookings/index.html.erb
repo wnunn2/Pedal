@@ -7,7 +7,7 @@
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-bookings" role="tabpanel" aria-labelledby="nav-bookings-tab">
-    <h3>My Bookings</h3>
+       <h2 class="d-flex justify-content-center mb-3">My Bookings</h2>
     <div>
       <% @user_bookings.each do |booking| %>
         <div class="card-user-booking my-3">
@@ -22,9 +22,10 @@
       <% end %>
     </div>
   </div>
+  <div class="container">
   <div class="tab-pane fade" id="nav-listings" role="tabpanel" aria-labelledby="nav-listings-tab">
-    <h3>My Listings</h3>
-      <div>
+  <h2 class="d-flex justify-content-center mb-3">My Listings</h2>
+      <div >
         <% @user_listings.each do |bicycle| %>
           <div class="card-user-booking my-3">
             <% bicycle.photos.each do |photo| %>
@@ -38,8 +39,9 @@
         <% end %>
       </div>
   </div>
+  </div>
   <div class="tab-pane fade" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab">
-    <h3>Booking Requests</h3>
+      <h2 class="d-flex justify-content-center mb-3">Booking Requests</h2>
     <div>
       <% @booking_requests.each do |booking| %>
         <div class="card-user-booking my-3">
