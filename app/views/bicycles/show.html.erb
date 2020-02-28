@@ -1,18 +1,14 @@
 <div class="container wrapper">
   <div class="row mt-5">
-    <div class="col-6">
+    <div class="col-7">
       <div class="card-trip mt-4 ">
         <% @bicycle.photos.each do |photo| %>
           <%= cl_image_tag photo.key, crop: :fill%>
         <% end %>
       </div>
     </div>
-    <div class="col-6">
-      <% if current_user == @bicycle.user %>
-        <%= "You have successfully listed your bicycle!" %>
-      <% else %>
-        <%= render 'bookings/booking-form' %>
-      <% end %>
+    <div class="col-5" style="margin-top: 24px">
+      <%= render 'bookings/booking-form' %>
     </div>
   </div>
 
