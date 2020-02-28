@@ -20,6 +20,9 @@ gem 'webpacker'
 gem 'devise'
 gem 'pundit'
 
+#simple_form
+gem 'simple_form'
+
 
 #secret keys
 gem 'dotenv-rails', groups: [:development, :test]
@@ -29,8 +32,6 @@ gem 'cloudinary', '~> 1.12.0'
 
 #geocoder
 gem 'geocoder'
-
-gem 'simple_form'
 
 
 group :development do
