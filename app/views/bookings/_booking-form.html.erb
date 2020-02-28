@@ -2,12 +2,12 @@
   <div class="col p-3">
     <h2 class="d-flex justify-content-center">Book Your Bicycle</h2>
   </div>
-  <div class="">
     <%= simple_form_for [@bicycle, @booking] do |f| %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.submit 'Book Now', class: 'btn-bike-descri' %>
+      <div class="d-flex align-content-center">
+       <div style="width: 200px;"><%= f.input :start_date, as: :date, html5: true %></div>
+        <div style="width: 200px"><%= f.input :end_date, as: :date, html5: true %></div>
+      </div>
+      <p class="total_" style="margin: 0; text-align: right; font-weight: bolder; padding-right: 9px; ">Total ¥1000</p>
+      <div style="width: 50px"><%= f.submit 'Book Now', class: 'btn-bike-descri' %></div>
     <% end %>
-  </div>
 </div>
-
