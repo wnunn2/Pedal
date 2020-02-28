@@ -30,7 +30,7 @@ gem 'cloudinary', '~> 1.12.0'
 #geocoder
 gem 'geocoder'
 
-
+gem 'simple_form'
 
 
 group :development do

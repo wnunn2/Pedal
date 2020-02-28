@@ -8,7 +8,15 @@ class BicyclesController < ApplicationController
     else
       @bicycles = Bicycle.all
     end
-      @query = params[:query]
+    @query = params[:query]
+    @bicycles = Bicycle.geocoded #returns bicycles with coordinates
+
+    @markers = @bicycles.map do |bicycle|
+      {
+        lat: bicycle.latitude,
+        lng: bicycle.longitude
+      }
+    end
   end
 
   def show
