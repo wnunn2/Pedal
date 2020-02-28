@@ -3,8 +3,7 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "pedal.png" %>
     <% end %>
-
-    <button class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <button class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -33,11 +32,11 @@
                     <%= link_to "Action", "#", class: "dropdown-item" %>
                     <%= link_to "Another action", "#", class: "dropdown-item" %>
                   </div>
-                </div>
+              </div>
         <% else %>
+          <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
         <% end %>
         </div>
         </div>
       </div>
-    </div>
   </div>
