@@ -7,29 +7,13 @@
         <% end %>
       </div>
     </div>
-    <div class="col-5" style="margin-top: 24px">
+    <div class="col-5 border rounded" style="margin-top: 24px">
       <%= render 'bookings/booking-form' %>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-12 p-3">
-      <div>
-        <div class="card-header-table">
+        <div class="card-header-table mt-3 border" style="background-color: white; width: 1125px; ">
           <table>
               <tbody>
-              <tr>
-                <th scope="row pt-3">Type:</th>
-                <td><%= @bicycle.category %></td>
-              </tr>
-              <tr>
-                <th scope="row">Location:</th>
-                <td><%= @bicycle.address %></td>
-              </tr>
-               <tr>
-                <th scope="row">Per day:</th>
-                <td>¥<%= @bicycle.day_price %></td>
-              </tr>
                <th scope="row">Description:</th>
                 <td><%= @bicycle.description %></td>
               </tr>
@@ -37,6 +21,4 @@
           </table>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
