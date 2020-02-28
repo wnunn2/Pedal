@@ -22,10 +22,20 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @new_status = params[:booking][:status]
+    if @booking.update(booking_params)
+      respond_to do |format|
+        format.js { flash[:notice] = "Booking Status Updated" }
+      end
+    end
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 
 end
