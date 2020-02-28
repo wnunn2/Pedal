@@ -16,7 +16,7 @@
           <% end %>
           <div class="card-user-booking-infos">
             <h4>Renting From:</h4>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %> |
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %>
           </div>
         </div>
       <% end %>
@@ -50,6 +50,15 @@
             <h4>Booking Request From:</h4>
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %>
           </div>
+          <div>
+            <%= link_to booking_path(booking, booking: { status: "accepted" }), remote: true, method: :patch do %>
+              <i class="fas fa-check"></i>
+            <% end %>
+            <%= link_to booking_path(booking, booking: { status: "rejected" }), remote: true, method: :patch do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          </div>
+          <div id="booking-result-<%= booking.id %>"></div>
         </div>
       <% end %>
     </div>
