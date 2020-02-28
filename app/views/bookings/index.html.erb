@@ -12,11 +12,11 @@
       <% @user_bookings.each do |booking| %>
         <div class="card-user-booking my-3">
           <% booking.bicycle.photos.each do |photo| %>
-          <%= cl_image_tag photo.key %>
+          <%= cl_image_tag (photo.key) %>
           <% end %>
           <div class="card-user-booking-infos">
             <h4>Renting From:</h4>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %> <%= @user.first_name %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "card-user avatar-bordered", alt: "avatar-bordered" %> |
           </div>
         </div>
       <% end %>

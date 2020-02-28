@@ -55,8 +55,8 @@ end
 user = User.new(
   email: "richlynch2@gmail.com",
   password: "123456",
-  first_name: "rich",
-  last_name: "lynch",
+  first_name: "Rich",
+  last_name: "Lynch",
 )
 user.save!
 
