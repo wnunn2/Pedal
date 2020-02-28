@@ -7,7 +7,22 @@
        <div style="width: 200px;"><%= f.input :start_date, as: :date, html5: true %></div>
         <div style="width: 200px"><%= f.input :end_date, as: :date, html5: true %></div>
       </div>
-      <p class="total_" style="margin: 0; text-align: right; font-weight: bolder; padding-right: 9px; ">Total ¥1000</p>
+      <table>
+              <tbody>
+              <tr>
+                <th scope="row pt-3">Type:</th>
+                <td><%= @bicycle.category %></td>
+              </tr>
+              <tr>
+                <th scope="row">Location:</th>
+                <td><%= @bicycle.address %></td>
+              </tr>
+               <tr>
+                <th scope="row">Per day:</th>
+                <td data-price="<%= @bicycle.day_price %>">¥<%= @bicycle.day_price %></td>
+              </tr>
+      </table>
+      <p class="total_ border-bottom" style="text-align: right; font-weight: bolder; padding-right: 22px; ">Total ¥<span id="total-price">-</span></p>
       <div style="width: 50px"><%= f.submit 'Book Now', class: 'btn-bike-descri' %></div>
     <% end %>
 </div>
