@@ -5,7 +5,8 @@ import { priceUpdate } from '../components/priceUpdate';
 initSweetalert('#confirm-booking', {
   title: "Your booking is confirmed",
   text: "Have a nice ride",
-  icon: "success"
+  icon: "success",
+  timer: 3000
 }, (value) => {
   console.log(value);
 });
