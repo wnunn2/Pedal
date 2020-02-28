@@ -2,30 +2,16 @@
   <div class="navbar sticky-top navbar-light navbar-lewagon">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "pedal.png" %>
-      <% end %>
+    <% end %>
     <button class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <% if user_signed_in? %>
           <%= link_to "List your bicycle", new_bicycle_path, class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto">
-        <% if user_signed_in? %>
-          <div class="dropdown-item">
-          </div>
-          <div class="dropdown-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </div>
-          <div class="dropdown-item dropdown">
-            <div class="dropdown-menu dropdown-menu-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown" >
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-            </div>
-          </div>
         <% else %>
+          <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
         <% end %>
       </div>
-    </div>
   </div>
