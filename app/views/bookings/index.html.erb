@@ -1,13 +1,13 @@
 <nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-bookings-tab" data-toggle="tab" href="#nav-bookings" role="tab" aria-controls="nav-bookings" aria-selected="true">My Bookings</a>
-    <a class="nav-item nav-link" id="nav-listings-tab" data-toggle="tab" href="#nav-listings" role="tab" aria-controls="nav-listings" aria-selected="false">My Listings</a>
-    <a class="nav-item nav-link" id="nav-requests-tab" data-toggle="tab" href="#nav-requests" role="tab" aria-controls="nav-requests" aria-selected="false">Booking Requests</a>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+    <a class="nav-item nav-link active" id="nav-bookings-tab" data-toggle="tab" href="#nav-bookings" role="tab" aria-controls="nav-bookings" aria-selected="true" style="height: 50px;"><strong>My Bookings</strong></a>
+    <a class="nav-item nav-link" id="nav-listings-tab" data-toggle="tab" href="#nav-listings" role="tab" aria-controls="nav-listings" aria-selected="false"><strong>My Listings</strong></a>
+    <a class="nav-item nav-link" id="nav-requests-tab" data-toggle="tab" href="#nav-requests" role="tab" aria-controls="nav-requests" aria-selected="false"><strong>Booking Requests</strong></a>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-bookings" role="tabpanel" aria-labelledby="nav-bookings-tab">
-       <h2 class="d-flex justify-content-center mb-3">My Bookings</h2>
+  <div class="tab-pane fade show active" id="nav-bookings" role="tabpanel" aria-labelledby="nav-bookings-tab" style="width: 500px; height: 10px;">
+       <h2 class="d-flex justify-content-center" style="margin-top: 80px; margin-bottom: 50px;">My Bookings</h2>
     <div>
       <% @user_bookings.each do |booking| %>
         <div class="card-user-booking my-3">
@@ -22,10 +22,9 @@
       <% end %>
     </div>
   </div>
-  <div class="container">
-  <div class="tab-pane fade" id="nav-listings" role="tabpanel" aria-labelledby="nav-listings-tab">
-  <h2 class="d-flex justify-content-center mb-3">My Listings</h2>
-      <div >
+  <div class="tab-pane fade" id="nav-listings" role="tabpanel" aria-labelledby="nav-listings-tab" style="width: 500px; height: 10px;">
+  <h2 class="d-flex justify-content-center"style="margin-top: 80px; margin-bottom: 50px;">My Listings</h2>
+      <div>
         <% @user_listings.each do |bicycle| %>
           <div class="card-user-booking my-3">
             <% bicycle.photos.each do |photo| %>
@@ -39,9 +38,8 @@
         <% end %>
       </div>
   </div>
-  </div>
-  <div class="tab-pane fade" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab">
-      <h2 class="d-flex justify-content-center mb-3">Booking Requests</h2>
+  <div class="tab-pane fade" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab" style="width: 500px; height: 10px;">
+      <h2 class="d-flex justify-content-center"style="margin-top: 80px; margin-bottom: 50px;">Booking Requests</h2>
     <div>
       <% @booking_requests.each do |booking| %>
         <div class="card-user-booking my-3">
